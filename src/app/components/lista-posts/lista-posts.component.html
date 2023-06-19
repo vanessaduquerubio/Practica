@@ -1,19 +1,19 @@
 <div class="container">
-    <div class="posts" *ngFor="let post of AllPosts">
-        <div class="post">
-            <h3>{{post.titulo}}</h3>
-            <p>{{post.texto}}</p>
-            <img [src]="post.imagen" alt="">
-            <div class="otrosdatos">
-                <p>{{post.fecha}}</p>
-                <p>{{post.autor}}</p>
-                <p>{{post.categoria}}</p>
+    <div class="posts ">
+        <div class=" post row" *ngFor="let post of AllPosts">
 
+            <div class="contenido col-8">
+                <h3>{{post.titulo}}</h3>
+                <p>{{post.texto}}</p>
+            </div>
+            <figure class="col-4">
+                <img [src]="post.imagen" alt="">
+            </figure>
+            <div class="otrosdatos col-12">
+                <p>{{post.autor }} </p>
+                <p>{{post.fecha }} </p>
+                <p>{{post.categoria}} </p>
             </div>
         </div>
-        <select name="" id="">Categoria
-            <option value=""></option>
-        </select>
-
     </div>
 </div>
