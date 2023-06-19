@@ -51,20 +51,31 @@ export class PublicacionesService {
         imagen: "URL de la foto del elemento 1",
         categoria: "Desarrollo Personal"
       }, {
-        titulo: "",
-        texto: " ",
-        autor: "",
-        fecha: 'mayo 2023',
+        titulo: "El papel de la educación en la economía moderna",
+        texto: "En la economía moderna, la educación desempeña un papel fundamental en el desarrollo y el crecimiento de los países. La adquisición de conocimientos y habilidades por parte de la fuerza laboral tiene un impacto directo en la productividad y la competitividad de una nación.En primer lugar, la educación proporciona a las personas las herramientas necesarias para acceder a mejores oportunidades laborales. A medida que la economía evoluciona hacia una mayor automatización y digitalización, las habilidades técnicas y cognitivas se vuelven cada vez más valiosas. Aquellos individuos que han recibido una educación de calidad tienen más posibilidades de encontrar empleo y de adaptarse a los cambios tecnológicos.Además, la educación fomenta la innovación y el emprendimiento. Los sistemas educativos que promueven el pensamiento crítico y la creatividad cultivan el espíritu empresarial y la capacidad de generar ideas nuevas. Estos emprendedores e innovadores son los impulsores del crecimiento económico, ya que crean empleos, desarrollan nuevos productos y servicios, y contribuyen al avance de la sociedad.La educación también juega un papel importante en la reducción de la desigualdad económica. A través de una educación equitativa y accesible, se pueden romper las barreras que perpetúan la pobreza y la exclusión social. Al brindar a todos los individuos la oportunidad de adquirir conocimientos y habilidades, se crean condiciones para una sociedad más justa y próspera. En conclusión, la educación es un factor clave en el desarrollo económico. No solo proporciona a las personas las herramientas necesarias para adaptarse a un entorno laboral en constante cambio, sino que también impulsa la innovación, el emprendimiento y la reducción de la desigualdad. Invertir en educación es invertir en el futuro de una nación y en el bienestar de sus ciudadanos. ",
+        autor: "Juan García",
+        fecha: 'febrero 2023',
         imagen: "URL de la foto del elemento 1",
-        categoria: ""
+        categoria: "Economia"
       }, {
-        titulo: "",
-        texto: " ",
-        autor: "",
+        titulo: "El poder de la programación en la era digital",
+        texto: " La programación se ha convertido en una habilidad esencial en la era digital. Con solo unas pocas líneas de código, se pueden crear aplicaciones, sitios web y soluciones tecnológicas que transforman la manera en que vivimos y trabajamos.La programación no solo es para expertos en informática; es una habilidad que todos podemos aprender. Conocer los fundamentos de la programación nos permite entender cómo funciona la tecnología que nos rodea y nos brinda la capacidad de crear nuestras propias herramientas y soluciones.Además, la programación ofrece innumerables oportunidades laborales. La demanda de programadores sigue en aumento, y muchas empresas buscan talento en este campo. Aprender a programar no solo amplía nuestras posibilidades de empleo, sino que también nos permite participar en la construcción de un futuro digital.La programación también fomenta el pensamiento lógico, la resolución de problemas y la creatividad. Al enfrentarnos a desafíos y encontrar soluciones a través del código, desarrollamos habilidades cognitivas y habilidades para la vida.En resumen, la programación es una habilidad valiosa en la era digital. Nos empodera, nos brinda oportunidades laborales y nos permite ser creadores en el mundo tecnológico. Aprender a programar es una inversión en nuestro futuro y nos abre las puertas a un mundo de posibilidades.",
+        autor: " María López",
         fecha: ' 2022',
         imagen: "URL de la foto del elemento 1",
         categoria: ""
       }
     ]
   }
+
+  getAll() {
+    return this.arrPosts
+  }
+
+  createPosts() {
+  }
+
+  getByCategoria() {
+  }
+
 }
