@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Post } from 'src/app/interfaces/post.interface';
+import { PublicacionesService } from 'src/app/services/publicaciones.service';
 
 @Component({
   selector: 'app-lista-posts',
@@ -6,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./lista-posts.component.css']
 })
 export class ListaPostsComponent {
+  AllPosts: Post[]
+
+  //services
+  publicacionesServices = inject(PublicacionesService)
+
+  constructor() {
+    this.AllPosts = []
+  }
+
+  ngOnInit() {
+    this.AllPosts = this.publicacionesServices.getAll()
+  }
+
 
 }
