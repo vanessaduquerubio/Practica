@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Post } from 'src/app/interfaces/post.interface';
+import { PublicacionesService } from 'src/app/services/publicaciones.service';
 
 
 @Component({
@@ -8,7 +10,11 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
+  nuevoPost: Post
+
   formulario: FormGroup;
+
+  publicacionesService = inject(PublicacionesService)
 
   constructor() {
     this.formulario = new FormGroup({
@@ -18,6 +24,15 @@ export class FormularioComponent {
       categoria: new FormControl,
       fecha: new FormControl,
     })
-
+    this.nuevoPost = {
+      titulo: '', texto: '', autor: '', fecha: '', imagen: '', categoria: ''
+    }
   }
+  enviarForm() {
+    this.publicacionesService.createPosts(this.nuevoPost)
+    console.log(this.nuevoPost)
+  }
+
 }
+
+
