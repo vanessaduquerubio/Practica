@@ -76,7 +76,8 @@ export class PublicacionesService {
     this.arrPosts.push(newPost)
   }
 
-  getByCategoria() {
+  getByCategoria(categoria: string) {
+    return this.arrPosts.filter(post => post.categoria === categoria)
   }
 
 }
