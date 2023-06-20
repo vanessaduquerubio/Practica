@@ -10,8 +10,7 @@ import { PublicacionesService } from 'src/app/services/publicaciones.service';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
-  nuevoPost: Post
-
+  newPost: Post
   formulario: FormGroup;
 
   publicacionesService = inject(PublicacionesService)
@@ -24,13 +23,15 @@ export class FormularioComponent {
       categoria: new FormControl,
       fecha: new FormControl,
     })
-    this.nuevoPost = {
+    this.newPost = {
       titulo: '', texto: '', autor: '', fecha: '', imagen: '', categoria: ''
     }
   }
-  enviarForm() {
-    this.publicacionesService.createPosts(this.nuevoPost)
-    console.log(this.nuevoPost)
+  onSubmit() {
+    //aqui coje el valor del formulario
+    this.newPost = this.formulario.value
+    console.log('newPost', this.newPost)
+    this.publicacionesService.createPosts(this.newPost)
   }
 
 }

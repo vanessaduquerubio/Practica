@@ -72,8 +72,8 @@ export class PublicacionesService {
     return this.arrPosts
   }
 
-  createPosts(nuevoPost: Post) {
-    this.arrPosts.push(nuevoPost)
+  createPosts(newPost: any) {
+    this.arrPosts.push(newPost)
   }
 
   getByCategoria() {

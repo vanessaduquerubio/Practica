@@ -1,25 +1,30 @@
 <div class="container">
-    <form action="">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
         <div class="mb-3">
             <label class="form-label">titulo del Post</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="titulo">
         </div>
         <div class="mb-3">
             <label class="form-label">Escribe aqui...</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="texto">
         </div>
         <div class="mb-3">
             <label class="form-label">Autor</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="autor">
         </div>
         <div class="mb-3">
             <label class="form-label">categoria</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="categoria">
         </div>
         <div class="mb-3">
             <label class="form-label">Fecha</label>
-            <input type="date" class="form-control">
+            <input type="date" class="form-control" formControlName="fecha">
         </div>
-        <input type="submit" value="">
+
+        <div class="mb-3">
+            <input type="submit" value="Enviar">
+        </div>
+
+
     </form>
 </div>
