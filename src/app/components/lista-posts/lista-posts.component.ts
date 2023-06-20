@@ -19,6 +19,7 @@ export class ListaPostsComponent {
 
   ngOnInit() {
     this.AllPosts = this.publicacionesServices.getAll()
+    console.log(this.AllPosts[0].categoria)
   }
 
 

@@ -1,12 +1,7 @@
 <div class="container">
     <select class="form-select" aria-label="Default select example">
         <option selected>Open this select menu</option>
-        <option value="">Economia</option>
-        <option value="">Programacion</option>
-        <option value="">Psicologia</option>
-        <option value="">Desarrollo personal</option>
-        <option value="">Emprendimiento</option>
-        <option value="">Salud </option>
+        <option value="" *ngFor="let post of AllPosts">{{post.categoria| json}}</option>
 
     </select>
     <div class="posts ">
