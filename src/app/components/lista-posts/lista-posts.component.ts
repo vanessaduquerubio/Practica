@@ -19,8 +19,12 @@ export class ListaPostsComponent {
 
   ngOnInit() {
     this.AllPosts = this.publicacionesServices.getAll()
-    console.log(this.AllPosts[0].categoria)
   }
+  filtroCategoria($event: any) {
+    this.AllPosts = this.publicacionesServices.getByCategoria($event.target.value)
+
+  }
+
 
 
 

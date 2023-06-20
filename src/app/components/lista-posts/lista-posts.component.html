@@ -1,7 +1,7 @@
 <div class="container">
-    <select class="form-select" aria-label="Default select example">
+    <select (change)="filtroCategoria($event)" class="form-select" aria-label="Default select example">
         <option selected>Open this select menu</option>
-        <option value="" *ngFor="let post of AllPosts">{{post.categoria| json}}</option>
+        <option [value]="post.categoria| json" *ngFor="let post of AllPosts">{{post.categoria| json}}</option>
 
     </select>
     <div class="posts ">
