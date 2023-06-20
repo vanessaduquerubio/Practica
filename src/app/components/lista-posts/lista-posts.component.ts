@@ -9,17 +9,19 @@ import { PublicacionesService } from 'src/app/services/publicaciones.service';
 })
 export class ListaPostsComponent {
   AllPosts: Post[]
-
   //services
   publicacionesServices = inject(PublicacionesService)
 
   constructor() {
     this.AllPosts = []
+
   }
 
   ngOnInit() {
     this.AllPosts = this.publicacionesServices.getAll()
   }
+
+
 
 
 }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-formulario',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent {
+  formulario: FormGroup;
 
+  constructor() {
+    this.formulario = new FormGroup({
+      titulo: new FormControl,
+      texto: new FormControl,
+      autor: new FormControl,
+      categoria: new FormControl,
+      fecha: new FormControl,
+    })
+
+  }
 }
