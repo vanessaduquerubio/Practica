@@ -9,22 +9,28 @@ import { PublicacionesService } from 'src/app/services/publicaciones.service';
 })
 export class ListaPostsComponent {
   AllPosts: Post[]
+
   //services
   publicacionesServices = inject(PublicacionesService)
 
   constructor() {
     this.AllPosts = []
 
+
   }
 
   ngOnInit() {
     this.AllPosts = this.publicacionesServices.getAll()
   }
+
   filtroCategoria($event: any) {
-    this.AllPosts = this.publicacionesServices.getByCategoria($event.target.value)
-
+    console.log($event.target.value)
+    if ($event.target.value === 'todos') {
+      this.AllPosts = this.publicacionesServices.getAll()
+    } else {
+      this.AllPosts = this.publicacionesServices.getByCategoria($event.target.value)
+    }
   }
-
 
 
 
