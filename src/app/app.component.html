@@ -1,8 +1,23 @@
 <header>
-
-  <button [routerLink]="['/allposts']">Ver todos
-  </button>
-  <button [routerLink]="['/new']">Nuevo post</button>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Verdades como puños</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/allposts']">Ver Todos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/new']">Nuevo Post</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <router-outlet></router-outlet>

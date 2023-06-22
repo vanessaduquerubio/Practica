@@ -1,63 +1,18 @@
 <div class="container">
     <select (change)="filtroCategoria($event)" class="form-select" aria-label="Default select example">
-        <option value="todos" selected>Open this select menu</option>
-        <option [value]="post.categoria" *ngFor="let post of AllPosts">{{post.categoria}}</option>
+        <option value="todos" selected>Selecciona Categoria</option>
+        <option value="Responsabilidad">Responsabilidad</option>
+        <option value="Autoestima">Autoestima</option>>
+        <option value="El colmo de un programador">El colmo de un programador</option>
 
     </select>
-    <div class="posts ">
-        <div class="card text-center">
-            <div class="card-header">
-                Blog
-            </div>
-            <div class="card-body row post " *ngFor="let post of AllPosts">
-                <div class="contenido col-8">
-                    <h5 class="card-title">{{post.titulo}}</h5>
-                    <p class="card-text">{{post.texto}}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                <figure class="col-4">
-                    <img [src]="post.imagen" alt="">
-                </figure>
-                <div class="card-footer text-body-secondary">
-                    {{post.fecha }}
-                </div>
+
+    <div class="row">
+        <div class="card col-4" style="width: 18rem;" *ngFor="let post of AllPosts">
+            <img [src]="post.imagen" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h2>{{post.titulo}}</h2>
+                <p class="card-text">{{post.texto}} </p>
             </div>
         </div>
-
-        <!-- opcion 2 -->
-
-
-        <!--  <div class=" post row" *ngFor="let post of AllPosts">
-            <div class="contenido col-8">
-                <h3>{{post.titulo}}</h3>
-                <p>{{post.texto}}</p>
-            </div>
-            <figure class="col-4">
-                <img [src]="post.imagen" alt="">
-            </figure>
-            <div class="otrosdatos col-12">
-                <p>{{post.autor }} </p>
-                <p>{{post.fecha }} </p>
-                <p>{{post.categoria}} </p>
-            </div>
-        </div>
-    </div> -->
-        <!-- opcion 3 -->
-        <!-- 
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0 " *ngFor=" let post of AllPosts">
-            <div class="col-md-4">
-                <img [src]="post.imagen" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{post.titulo}}</h5>
-                    <p class="card-text">{{post.texto}}</p>
-                    <p class="card-text">{{post.autor}}<small class="text-body-secondary">{{post.fecha}}</small></p>
-                </div>
-            </div>
-        </div>
-    </div>
- -->
-
     </div>
