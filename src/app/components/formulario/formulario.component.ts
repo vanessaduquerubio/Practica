@@ -27,6 +27,8 @@ export class FormularioComponent {
       titulo: '', texto: '', autor: '', fecha: '', imagen: '', categoria: ''
     }
   }
+
+
   onSubmit() {
     //aqui coje el valor del formulario
     this.newPost = this.formulario.value

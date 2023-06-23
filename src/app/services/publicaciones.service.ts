@@ -48,7 +48,7 @@ export class PublicacionesService {
         texto: " No",
         autor: " Ana García",
         fecha: ' enero 2023',
-        imagen: "https://i.pinimg.com/564x/d6/b7/58/d6b758b689c234238546752578ba6257.jpg",
+        imagen: "https://i.pinimg.com/564x/3c/b8/d6/3cb8d6e5fba2920e586edc1a31e3a27a.jpg",
         categoria: "Autoestima"
       }, {
         titulo: "Que",
