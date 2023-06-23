@@ -1,9 +1,16 @@
+h2 {
+
+    margin-top: 100px;
+    font-weight: bolder;
+}
+
 form {
-    margin-top: 40px;
+
     padding: 20px;
     background-color: rgba(255, 140, 0, 0.726);
     border: 5px solid rgba(28, 128, 190, 0.699);
     border-radius: 20px;
+
 }
 
 .btn {

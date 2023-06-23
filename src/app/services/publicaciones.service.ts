@@ -97,10 +97,13 @@ export class PublicacionesService {
   }
 
   getAll() {
+
     return this.arrPosts
   }
 
   createPosts(newPost: any) {
+    /*   this.arrPosts=(this.storeService)
+   */
     this.arrPosts.push(newPost)
   }
 

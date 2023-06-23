@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Post } from 'src/app/interfaces/post.interface';
 import { PublicacionesService } from 'src/app/services/publicaciones.service';
 
@@ -13,7 +14,9 @@ export class FormularioComponent {
   newPost: Post
   formulario: FormGroup;
 
+
   publicacionesService = inject(PublicacionesService)
+  router = inject(Router)
 
   constructor() {
     this.formulario = new FormGroup({
@@ -34,6 +37,9 @@ export class FormularioComponent {
     this.newPost = this.formulario.value
     console.log('newPost', this.newPost)
     this.publicacionesService.createPosts(this.newPost)
+    this.router.navigate(['/allposts'])
+
+
   }
 
 }
